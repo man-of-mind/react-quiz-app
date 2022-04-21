@@ -1,12 +1,12 @@
 import React from "react";
+import { Answer } from "../App";
+import styles from "./questionCard.module.scss";
 
 interface Props {
     question: string,
     answers: string[],
-    callback: any;
-    userAnswer: any,
-    questionNumber: number,
-    totalQuestions: number
+    callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    userAnswer: Answer | undefined,
 }
 
 const QuestionCard: React.FC<Props> = ({ 
@@ -14,18 +14,13 @@ const QuestionCard: React.FC<Props> = ({
     answers, 
     callback, 
     userAnswer, 
-    questionNumber, 
-    totalQuestions
 }) => {
     return(
         <>
-        <p className="current-question"> 
-            Question: {questionNumber} / {totalQuestions}
-        </p>
-        <p dangerouslySetInnerHTML={{ __html: question }}></p>
+        <p className={styles['question']} dangerouslySetInnerHTML={{ __html: question }}></p>
         <div>
-            {answers.map(answer => (<div key={answer}>
-                <button disabled={userAnswer} onClick={callback}>
+            {answers.map(answer => (<div key={answer} className={styles['options-row']}>
+                <button disabled={userAnswer ? true: false} value={answer} onClick={callback}>
                     <span dangerouslySetInnerHTML={{ __html: answer }} />
                 </button>
             </div>))}
