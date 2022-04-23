@@ -48,3 +48,15 @@
     border-radius: 5px;
     width: 400px;
 }
+
+@media screen and(max-width: 800px) {
+    .options {
+        width: calc(100vw - 50px);
+    }
+    .correct-option {
+        width: calc(100vw - 50px);
+    }
+    .wrong-option {
+        width: calc(100vw - 50px);
+    }
+}
