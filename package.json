@@ -2,7 +2,7 @@
     "name": "quiz-app",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://man-of-mind.github.io",
+    "homepage": "https://man-of-mind.github.io/react-quiz-app/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.1.1",
