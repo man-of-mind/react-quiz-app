@@ -20,7 +20,11 @@ const QuestionCard: React.FC<Props> = ({
         <p className={styles['question']} dangerouslySetInnerHTML={{ __html: question }}></p>
         <div>
             {answers.map(answer => (<div key={answer}>
-                <button disabled={userAnswer ? true: false} value={answer} onClick={callback} className={styles['options']}>
+                <button disabled={userAnswer ? true: false} value={answer} onClick={callback} className={ 
+                    userAnswer?.correctAnswer === answer ? 
+                    styles['correct-option'] : 
+                    userAnswer?.correctAnswer !== answer && userAnswer?.answer === answer ? 
+                    styles['wrong-option'] : styles['options']}>
                     <span dangerouslySetInnerHTML={{ __html: answer }} />
                 </button>
             </div>))}
