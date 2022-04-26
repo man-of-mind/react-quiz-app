@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Quicksand:wght@500;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -74,20 +75,88 @@
     }
 }
 
+.modal {
+    background: linear-gradient( 90deg, rgb(8, 167, 141) 0%, rgba(100, 115, 255, 1) 100%);
+    height: 100vh;
+    padding-top: 25%;
+    position: fixed;
+    width: 100vw;
+    color: black;
+    font-family: 'Quicksand', 'sans-serif';
+    .modal-container {
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        flex-direction: column;
+        background-color: white;
+        width: 500px;
+        padding: 20px;
+        h2 {
+            font-size: 40px;
+            padding: 20px;
+        }
+        p {
+            padding-bottom: 20px;
+        }
+        .start {
+            margin-top: 10px;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            background: linear-gradient( 90deg, rgba(93, 12, 255, 1) 0%, rgba(155, 0, 250, 1) 100%);
+            color: #fff;
+            text-transform: capitalize;
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
     .App {
         .container {
-            border: none;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            flex-direction: column;
-            background-color: black;
-            color: white;
             width: calc(100% - 50px);
-            padding: 20px
+            padding: 20px;
+            .score-questions-container {
+                font-size: 16px;
+                width: 100%;
+            }
+            .buttons {
+                width: 100%;
+                .next-prev {
+                    padding: 12px 18px;
+                }
+            }
+        }
+    }
+    .modal {
+        .modal-container {
+            background-color: white;
+            width: calc(100% - 60px);
+            padding: 20px;
+            h2 {
+                font-size: 40px;
+                padding: 20px;
+            }
+            p {
+                padding-bottom: 20px;
+            }
+            .start {
+                margin-top: 10px;
+                padding: 12px 22px;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none;
+                background: linear-gradient( 90deg, rgba(93, 12, 255, 1) 0%, rgba(155, 0, 250, 1) 100%);
+                color: #fff;
+                text-transform: capitalize;
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 
 interface TimeState {
@@ -17,16 +17,6 @@ const Timer:React.FC<Props> = ({ time }) => {
         seconds: time - Math.floor((time) / 60) * 60,
         minute: Math.floor((time) / 60)
     });
-    
-    const timeRef = useRef()
-//    console.log(timeRef)
-
-    const ref = useRef(null);
-
-    useEffect(() => {
-        console.log(ref)
-        // `ref.current` now refers to the first non-empty child
-    })
 
     useEffect(() => {
         setTimeout(() => {
