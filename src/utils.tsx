@@ -7,7 +7,7 @@ export interface Question {
     type: string
 }
 
-export type QuestionState =  Question & { answers: string[] };
+export type QuestionState =  Question & { answers: string[], status: boolean };
 
 export enum Difficulty {
     EASY = "easy",
@@ -22,6 +22,7 @@ export const fetchQuestions = async (total: number, difficulty: Difficulty) => {
     const data = await (await fetch(apiEndpoint)).json();
     return data.results.map((question: Question) => ({
         ...question,
-        answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
+        answers: shuffleArray([...question.incorrect_answers, question.correct_answer]),
+        status: false
     }));
 }

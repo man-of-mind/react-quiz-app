@@ -49,23 +49,28 @@
         padding: 20px;
         .score {
             color: aqua;
-            margin-right: auto;
         }
         .current-question {
             color: purple;
         }
     }
-    .next {
-        text-decoration: none;
-        padding: 12px 32px;
-        border: none;
-        border-radius: 6px;
-        margin-top: 10px;
-        cursor: pointer;
-        outline: none;
-        background: linear-gradient( 90deg, rgba(93, 12, 255, 1) 0%, rgba(155, 0, 250, 1) 100%);
-        color: #fff;
-        text-transform: capitalize;
+    .buttons {
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        align-items: center;
+        .next-prev {
+            text-decoration: none;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 6px;
+            margin-top: 10px;
+            cursor: pointer;
+            outline: none;
+            background: linear-gradient( 90deg, rgba(93, 12, 255, 1) 0%, rgba(155, 0, 250, 1) 100%);
+            color: #fff;
+            text-transform: capitalize;
+        }
     }
 }
 
